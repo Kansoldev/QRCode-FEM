@@ -84,12 +84,6 @@ body {
   padding: 14px;
 }
 
-/*
-   overflow: hidden is needed here because when the border-radius is applied,
-   the image hides the radius from showing. In other to see this, try putting
-   border: 2px solid red, you would notice that the radius is applied,
-   but the image is sort of covering it from showing, that's why overflow hidden is needed
-*/
 .card-header {
   border-radius: 10px;
   overflow: hidden;
