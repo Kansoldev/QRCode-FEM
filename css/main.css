@@ -1,0 +1,121 @@
+/* Andy Bells CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Styles */
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(212, 45%, 89%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  width: 286px;
+  max-width: 100%;
+  padding: 14px;
+}
+
+/*
+   overflow: hidden is needed here because when the border-radius is applied,
+   the image hides the radius from showing. In other to see this, try putting
+   border: 2px solid red, you would notice that the radius is applied,
+   but the image is sort of covering it from showing, that's why overflow hidden is needed
+*/
+.card-header {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-body h1 {
+  color: hsl(218, 44%, 22%);
+  font-size: 1.375rem;
+  line-height: 1;
+  margin: 20px 0;
+}
+
+.card-body p {
+  color: hsl(220, 15%, 55%);
+  font-size: 0.9375rem;
+  line-height: 1.2;
+}
+
+.attribution {
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
